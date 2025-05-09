@@ -11,9 +11,10 @@ namespace Pong.Movements
     {
         [SerializeField] private float _speedMovement;
         
+        protected Vector2 _currentDirection = Vector2.zero;
+        
         private MovementCommandReceiver _movementCommandReceiver;
         private List<MovementCommand> _movementCommandList = new();
-        private Vector2 _currentDirection = Vector2.zero;
         private int _currentCommandIndex = 0;
 
         private void Awake()
