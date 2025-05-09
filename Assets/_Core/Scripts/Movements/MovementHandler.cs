@@ -58,5 +58,7 @@ namespace Pong.Movements
         }
         
         public void SetMovementDirection(InputAction.CallbackContext ctx) => _currentDirection = ctx.performed ? ctx.ReadValue<Vector2>() : Vector2.zero;
+        
+        public void SetMovementDirection(Vector2 direction) => _currentDirection = direction;
     }
 }
