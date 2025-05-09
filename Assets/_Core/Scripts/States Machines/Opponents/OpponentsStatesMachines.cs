@@ -1,9 +1,13 @@
+using Pong.Movements;
+using Pong.StatesMachines.Opponents.States;
 using UnityEngine;
 
 namespace Pong.StatesMachines.Opponents
 {
     public class OpponentsStatesMachines : MonoBehaviour
     {
+        [SerializeField] private GameObject _ballGameObjectReference;
+        
         private IStates<OpponentsData> _currentStates;
         private OpponentsData _currentData;
 
@@ -11,11 +15,12 @@ namespace Pong.StatesMachines.Opponents
         {
             _currentData = new OpponentsData()
             {
-                // data
+                OpponentGameObject = gameObject,
+                OpponentsMovementHandler = GetComponent<MovementHandler>(),
+                BallGameObjectReference = _ballGameObjectReference,
             };
             
-            // first state
-            // TransitionTo();
+            TransitionTo(new OpponentDefenseState());
         }
 
         private void Update()
