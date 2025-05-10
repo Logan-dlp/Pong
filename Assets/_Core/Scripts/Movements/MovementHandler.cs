@@ -11,7 +11,7 @@ namespace Pong.Movements
     {
         [SerializeField] private float _speedMovement;
         
-        protected Vector2 _currentDirection = Vector2.zero;
+        protected Vector2 _currentDirection { get; private set; } = Vector2.zero;
         
         private MovementCommandReceiver _movementCommandReceiver;
         private List<MovementCommand> _movementCommandList = new();
