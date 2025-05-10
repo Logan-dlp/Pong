@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Pong.Movements
+namespace Pong.Movements.MovementHandlers
 {
     public class BallMovementHandler : MovementHandler
     {
