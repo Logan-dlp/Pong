@@ -213,3 +213,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speedMovement: 3
+  _isClampedMovement: 1
+  _clampYMovement: {x: -3, y: 3}

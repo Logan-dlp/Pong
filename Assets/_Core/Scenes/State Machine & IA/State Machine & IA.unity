@@ -422,6 +422,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &643845334 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5198946674317926975, guid: 071fc9ee6444af149ad07d255cf800b1, type: 3}
+  m_PrefabInstance: {fileID: 4841211365831911935}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &841411712
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -609,11 +614,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!1 &1143071123 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6322239132110861066, guid: 7c220a47a5a3beb4d9545f063c031e23, type: 3}
-  m_PrefabInstance: {fileID: 841411712}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2050946253
 GameObject:
   m_ObjectHideFlags: 0
@@ -804,7 +804,7 @@ PrefabInstance:
     - target: {fileID: 5116058019015554675, guid: 06eee7969599a0249a4df6959fa5355e, type: 3}
       propertyPath: _ballGameObjectReference
       value: 
-      objectReference: {fileID: 1143071123}
+      objectReference: {fileID: 643845334}
     - target: {fileID: 5973718600743793618, guid: 06eee7969599a0249a4df6959fa5355e, type: 3}
       propertyPath: m_Name
       value: LocalOpponent - v1

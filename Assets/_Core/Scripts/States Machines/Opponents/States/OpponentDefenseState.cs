@@ -11,17 +11,24 @@ namespace Pong.StatesMachines.Opponents.States
 
         public IStates<OpponentsData> Update(OpponentsData data)
         {
-            if (Mathf.Abs(data.OpponentGameObject.transform.position.y - data.BallGameObjectReference.transform.position.y) < .3f)
+            if (Vector2.Distance(data.OpponentGameObject.transform.position, data.BallGameObjectReference.transform.position) < 7f)
+            {
+                if (Mathf.Abs(data.OpponentGameObject.transform.position.y - data.BallGameObjectReference.transform.position.y) < .3f)
+                {
+                    data.OpponentsMovementHandler.SetMovementDirection(Vector2.zero);
+                }
+                else if (data.OpponentGameObject.transform.position.y < data.BallGameObjectReference.transform.position.y)
+                {
+                    data.OpponentsMovementHandler.SetMovementDirection(Vector2.up);
+                }
+                else if (data.OpponentGameObject.transform.position.y > data.BallGameObjectReference.transform.position.y)
+                {
+                    data.OpponentsMovementHandler.SetMovementDirection(Vector2.down);
+                }
+            }
+            else
             {
                 data.OpponentsMovementHandler.SetMovementDirection(Vector2.zero);
-            }
-            else if (data.OpponentGameObject.transform.position.y < data.BallGameObjectReference.transform.position.y)
-            {
-                data.OpponentsMovementHandler.SetMovementDirection(Vector2.up);
-            }
-            else if (data.OpponentGameObject.transform.position.y > data.BallGameObjectReference.transform.position.y)
-            {
-                data.OpponentsMovementHandler.SetMovementDirection(Vector2.down);
             }
             
             return null;

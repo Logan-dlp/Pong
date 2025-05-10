@@ -110,6 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speedMovement: 5
+  _clampYMovement: {x: -10, y: 10}
 --- !u!1 &8997319755132148459
 GameObject:
   m_ObjectHideFlags: 0
