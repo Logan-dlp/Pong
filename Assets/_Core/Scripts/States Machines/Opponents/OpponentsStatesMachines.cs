@@ -29,6 +29,13 @@ namespace Pong.StatesMachines.Opponents
         
         private void Awake()
         {
+            if (_playerGameObjectReference == null || _ballGameObjectReference == null)
+            {
+                Debug.LogError($"Not all references were put in the inspector in '{name}'!\n'{_playerGameObjectReference}, {_ballGameObjectReference}'");
+                enabled = false;
+                return;
+            }
+            
             _currentData = new OpponentsData
             {
                 OpponentGameObject = gameObject,
