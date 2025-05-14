@@ -1,13 +1,17 @@
-using Pong.Movements;
 using UnityEngine;
 
 namespace Pong.Ball
 {
+    using Movements;
+
     public class BallMovementHandler : MovementHandler
     {
         private void Start()
         {
-            Vector2 direction = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized;
+            Vector2 direction;
+            do direction = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized;
+            while (direction.x == 0);
+
             SetMovementDirection(direction);
         }
 
