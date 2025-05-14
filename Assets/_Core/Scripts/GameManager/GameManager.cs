@@ -1,8 +1,8 @@
-using Pong.Goal;
 using UnityEngine;
 
 namespace Pong.GameManager
 {
+    using Goal;
     public class GameManager : MonoBehaviour
     {
         [SerializeField] private GoalBehaviour _goalLeft, _goalRight;

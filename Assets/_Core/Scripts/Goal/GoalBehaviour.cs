@@ -1,9 +1,10 @@
 using System;
-using Pong.Observer;
 using UnityEngine;
 
 namespace Pong.Goal
 {
+    using Observer;
+
     [RequireComponent(typeof(Rigidbody2D))]
     public class GoalBehaviour : MonoBehaviour
     {
