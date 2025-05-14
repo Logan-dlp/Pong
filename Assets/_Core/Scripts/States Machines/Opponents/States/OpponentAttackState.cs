@@ -2,7 +2,7 @@
 
 namespace Pong.StatesMachines.Opponents.States
 {
-    public class OpponentDefenseState : IStates<OpponentsData>
+    public class OpponentAttackState : IStates<OpponentsData>
     {
         private float _timeToExecuteState;
         
@@ -15,11 +15,21 @@ namespace Pong.StatesMachines.Opponents.States
         {
             if (Vector2.Distance(data.OpponentGameObject.transform.position, data.BallGameObjectReference.transform.position) < data.BallDetectionDistance)
             {
-                if (data.OpponentGameObject.transform.position.y + data.BallDetectionErrorMargin < data.BallGameObjectReference.transform.position.y)
+                float offset = 0;
+                if (data.PlayerGameObjectReference.transform.position.y > data.OpponentGameObject.transform.position.y)
+                {
+                    offset += 1f;
+                }
+                else if (data.PlayerGameObjectReference.transform.position.y < data.OpponentGameObject.transform.position.y)
+                {
+                    offset -= 1f;
+                }
+                
+                if (data.OpponentGameObject.transform.position.y + data.BallDetectionErrorMargin < data.BallGameObjectReference.transform.position.y + offset)
                 {
                     data.OpponentsMovementHandler.SetMovementDirection(Vector2.up);
                 }
-                else if (data.OpponentGameObject.transform.position.y - data.BallDetectionErrorMargin > data.BallGameObjectReference.transform.position.y)
+                else if (data.OpponentGameObject.transform.position.y - data.BallDetectionErrorMargin > data.BallGameObjectReference.transform.position.y + offset)
                 {
                     data.OpponentsMovementHandler.SetMovementDirection(Vector2.down);
                 }
@@ -32,14 +42,14 @@ namespace Pong.StatesMachines.Opponents.States
             {
                 data.OpponentsMovementHandler.SetMovementDirection(Vector2.zero);
             }
-
+            
             if (_timeToExecuteState > 0)
             {
                 _timeToExecuteState -= Time.deltaTime;
                 return null;
             }
             
-            return new OpponentAttackState();
+            return new OpponentDefenseState();
         }
 
         public void Exit(OpponentsData data)
