@@ -8,7 +8,7 @@ namespace Pong.StatesMachines.Opponents.States
         
         public void Enter(OpponentsData data)
         {
-            _timeToExecuteState = Random.Range(data.TimeToExecuteState.x, data.TimeToExecuteState.x);
+            _timeToExecuteState = Random.Range(data.TimeToExecuteState.x, data.TimeToExecuteState.y);
         }
 
         public IStates<OpponentsData> Update(OpponentsData data)
