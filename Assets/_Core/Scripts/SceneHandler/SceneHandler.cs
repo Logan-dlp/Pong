@@ -11,9 +11,10 @@ namespace Pong.SceneHandler
         {
             if (instance != null && instance != this)
             {
-                Destroy(gameObject);
+                Destroy(instance.gameObject);
             }
             instance = this;
+            DontDestroyOnLoad(gameObject);
         }
 
         public void LoadMenu()
