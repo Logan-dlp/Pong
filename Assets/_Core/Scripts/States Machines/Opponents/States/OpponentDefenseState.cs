@@ -13,6 +13,9 @@ namespace Pong.StatesMachines.Opponents.States
 
         public IStates<OpponentsData> Update(OpponentsData data)
         {
+            if (data.BallGameObjectReference == null)
+                return null;
+            
             if (Vector2.Distance(data.OpponentGameObject.transform.position, data.BallGameObjectReference.transform.position) < data.BallDetectionDistance)
             {
                 if (data.OpponentGameObject.transform.position.y + data.BallDetectionErrorMargin < data.BallGameObjectReference.transform.position.y)
