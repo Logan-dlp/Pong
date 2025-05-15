@@ -10,10 +10,13 @@ namespace Pong.Movements
     public class MovementHandler : MonoBehaviour
     {
         [SerializeField] private float _speedMovement;
+        [SerializeField] private bool _isClampedMovement;
+        [SerializeField, HideInInspector] private Vector2 _clampYMovement;
+        
+        protected Vector2 _currentDirection { get; private set; } = Vector2.zero;
         
         private MovementCommandReceiver _movementCommandReceiver;
         private List<MovementCommand> _movementCommandList = new();
-        private Vector2 _currentDirection = Vector2.zero;
         private int _currentCommandIndex = 0;
 
         private void Awake()
@@ -30,7 +33,10 @@ namespace Pong.Movements
         {
             if (direction != Vector2.zero)
             {
-                MovementCommand movementCommand = new(_movementCommandReceiver, gameObject, direction, _speedMovement);
+                MovementCommand movementCommand = _isClampedMovement ? 
+                    new(_movementCommandReceiver, gameObject, direction, _clampYMovement, _speedMovement) : 
+                    new(_movementCommandReceiver, gameObject, direction, _speedMovement);
+                
                 movementCommand.Execute();
                 _movementCommandList.Add(movementCommand);
                 _currentCommandIndex++;
@@ -58,5 +64,7 @@ namespace Pong.Movements
         }
         
         public void SetMovementDirection(InputAction.CallbackContext ctx) => _currentDirection = ctx.performed ? ctx.ReadValue<Vector2>() : Vector2.zero;
+        
+        public void SetMovementDirection(Vector2 direction) => _currentDirection = direction;
     }
 }
