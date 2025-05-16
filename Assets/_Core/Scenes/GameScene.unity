@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GoalRight
       objectReference: {fileID: 0}
+    - target: {fileID: 4889519745863394802, guid: 0ec82c457428f8f49bf6a8cc7cafda9e, type: 3}
+      propertyPath: _goalScoredEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: ee885bacabac89d48a129d3cb272a42f, type: 2}
     - target: {fileID: 5195757288340270720, guid: 0ec82c457428f8f49bf6a8cc7cafda9e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.5
@@ -236,51 +240,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8cbed7de64a7a14c85ce8e7ed14fcd0, type: 3}
---- !u!1 &708043367
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 708043369}
-  - component: {fileID: 708043368}
-  m_Layer: 0
-  m_Name: GoalTestListener
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &708043368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 708043367}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22e21d5962cbe4a43ba08b63cc92ab49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _eventScriptable: {fileID: 11400000, guid: 5e656951183fbe3469490e0201132cd2, type: 2}
---- !u!4 &708043369
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 708043367}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.1844646, y: 0.040685177, z: -0.008500493}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &823189789
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,6 +377,108 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!1 &1032770856
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1032770858}
+  - component: {fileID: 1032770857}
+  - component: {fileID: 1032770860}
+  - component: {fileID: 1032770859}
+  m_Layer: 0
+  m_Name: GoalListenerTest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1032770857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032770856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78c504c9aee285f4b900626e23c1e84f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _eventScriptable: {fileID: 11400000, guid: 5e656951183fbe3469490e0201132cd2, type: 2}
+  _unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1032770859}
+        m_TargetAssemblyTypeName: Pong.Goals.GoalListenerTestBehaviour, Assembly-CSharp
+        m_MethodName: GoalLeftScored
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!4 &1032770858
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032770856}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11.5, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1032770859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032770856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5295a781982cd148ad7897421b204ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1032770860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032770856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78c504c9aee285f4b900626e23c1e84f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _eventScriptable: {fileID: 11400000, guid: ee885bacabac89d48a129d3cb272a42f, type: 2}
+  _unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1032770859}
+        m_TargetAssemblyTypeName: Pong.Goals.GoalListenerTestBehaviour, Assembly-CSharp
+        m_MethodName: GoalRightScored
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1073848879
 GameObject:
   m_ObjectHideFlags: 0
@@ -560,7 +621,7 @@ Transform:
   m_GameObject: {fileID: 1073848879}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.96, y: 0.14, z: 0}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -578,6 +639,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GoalLeft
       objectReference: {fileID: 0}
+    - target: {fileID: 4889519745863394802, guid: 0ec82c457428f8f49bf6a8cc7cafda9e, type: 3}
+      propertyPath: _goalScoredEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 5e656951183fbe3469490e0201132cd2, type: 2}
     - target: {fileID: 5195757288340270720, guid: 0ec82c457428f8f49bf6a8cc7cafda9e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.5
@@ -690,4 +755,4 @@ SceneRoots:
   - {fileID: 2363155281447788746}
   - {fileID: 559620012}
   - {fileID: 1073848883}
-  - {fileID: 708043369}
+  - {fileID: 1032770858}

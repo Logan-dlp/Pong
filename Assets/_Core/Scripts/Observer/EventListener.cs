@@ -1,21 +1,26 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Pong.Observer
 {
-    public abstract class EventListener<T, E> : MonoBehaviour where E : EventScriptable<T>
+    public class EventListener : MonoBehaviour
     {
-        [SerializeField] private E _eventScriptable;
+        [SerializeField] private EventScriptable _eventScriptable;
+        [SerializeField] private UnityEvent _unityEvent;
 
         private void OnEnable()
         {
-            _eventScriptable?.Subscribe(OnEvent);
+            _eventScriptable.Listeners += OnEvent;
         }
 
         private void OnDisable()
         {
-            _eventScriptable?.Unsubscribe(OnEvent);
+            _eventScriptable.Listeners -= OnEvent;
         }
 
-        protected virtual void OnEvent(T value) { }
+        private void OnEvent() 
+        {
+            _unityEvent.Invoke();
+        }
     }
 }
