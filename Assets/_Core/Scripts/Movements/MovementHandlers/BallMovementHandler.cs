@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 namespace Pong.Movements.MovementHandlers
 {
@@ -6,22 +6,20 @@ namespace Pong.Movements.MovementHandlers
     {
         private void Start()
         {
-            float randomFloat = Random.Range(1f, 2f);
-            Vector2 randomDirection = randomFloat > 1.5f ? Vector2.right : Vector2.left;
-            
-            SetMovementDirection(randomDirection);
+            Vector2 direction = Random.value < 0.5f ? Vector2.left : Vector2.right;
+            SetMovementDirection(direction);
         }
 
-        private void OnCollisionEnter2D(Collision2D other)
+        private void OnCollisionEnter2D(Collision2D collision)
         {
-            Vector2 targetDirection = Vector2.Reflect(_currentDirection, other.contacts[0].normal);
-
-            if (other.transform.TryGetComponent(out MovementHandler movementHandler))
+            Vector2 direction = Vector2.Reflect(_currentDirection, collision.contacts[0].normal);
+            if (collision.transform.TryGetComponent(out MovementHandler movementHandler))
             {
-                targetDirection -= (Vector2)other.transform.position - other.contacts[0].point;
+                direction -= (Vector2)collision.transform.position - collision.contacts[0].point;
             }
             
-            SetMovementDirection(targetDirection.normalized);
+            SetMovementDirection(direction.normalized);
         }
     }
 }
+
