@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1566659069490848281}
   - component: {fileID: 1829556860631582407}
   - component: {fileID: 879478521249072955}
-  - component: {fileID: 2910608928627736979}
+  - component: {fileID: 4889519745863394802}
   m_Layer: 0
   m_Name: Goal
   m_TagString: Untagged
@@ -159,7 +159,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &2910608928627736979
+--- !u!114 &4889519745863394802
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -168,6 +168,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4628698915192244273}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78c504c9aee285f4b900626e23c1e84f, type: 3}
+  m_Script: {fileID: 11500000, guid: a808dbe0ef1eb1f46a20e1a0ebf031e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _goalScoredEvent: {fileID: 11400000, guid: 5e656951183fbe3469490e0201132cd2, type: 2}
