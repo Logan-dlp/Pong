@@ -10,4 +10,3 @@ namespace Pong.Observers
         private void OnCollisionEnter2D(Collision2D collision) => OnCollisionEvent?.Invoke();
     }
 }
-
