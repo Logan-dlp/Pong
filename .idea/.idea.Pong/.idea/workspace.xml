@@ -5,24 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f713908d-eb31-4724-b54f-095fab809440" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/_Core/Scripts/Messages/Listeners/MessageListener.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Core/Prefabs/Border.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Core/Prefabs/Border.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Core/Prefabs/Goal.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Core/Prefabs/Goal.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Core/Scenes/Ball/BallScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Core/Scenes/Ball/BallScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Core/Scenes/BallScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Core/Scenes/BallScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Core/Scenes/GameScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Core/Scenes/GameScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Core/Scripts/Observers.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Core/Scripts/Messages.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Core/Scripts/Observers/CollisionEventInvoker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Core/Scripts/Events/CollisionEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Core/Scripts/Observers/CollisionEventInvoker.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Core/Scripts/Events/CollisionEvent.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Core/Scripts/Observers/EventListener.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Core/Scripts/Observers/EventListener.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Core/Scripts/Messages/Listeners/MessageListener.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Core/Scripts/Observers/MessageScriptable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Core/Scripts/Messages/Message.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Core/Scripts/Observers/MessageScriptable.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Core/Scripts/Messages/Message.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Pong/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Pong/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Core/Events.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Core/Events/Goals.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Core/Events/Goals/GoalLeftScoredEvent.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Core/Events/Goals/GoalLeftScoredEvent.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Core/Events/Goals/GoalRightScoredEvent.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Core/Events/Goals/GoalRightScoredEvent.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Core/Prefabs/Balls/LocalBall - v2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Core/Prefabs/Balls/LocalBall - v2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Core/Scenes/Factory/FactoryScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Core/Scenes/Factory/FactoryScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,10 +27,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/eba3e820b14541a0aff0ae05a10b2e24177000/7b/ca050bae/GameObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/fb0ae031569047f2bdf52a1bd41f429720a00/1a/c5fa5441/Collision2D.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Core/Scripts/Commands/ACommand.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Core/Scripts/Commands/Command/MovementCommand.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Core/Scripts/Observer/EventScriptable.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
@@ -141,7 +132,7 @@
       <workItem from="1747398209211" duration="1111000" />
       <workItem from="1747660267464" duration="767000" />
       <workItem from="1747817992542" duration="369000" />
-      <workItem from="1747823467039" duration="4246000" />
+      <workItem from="1747823467039" duration="6298000" />
     </task>
     <servers />
   </component>
