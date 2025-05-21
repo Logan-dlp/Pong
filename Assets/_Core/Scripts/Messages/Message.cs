@@ -1,12 +1,16 @@
 using System;
 using UnityEngine;
 
-namespace Pong.Observers
+namespace Pong.Messages
 {
     [CreateAssetMenu(fileName = "MessageScriptable", menuName = "MessageScriptable")]
-    public class MessageScriptable : ScriptableObject
+    public class Message : ScriptableObject
     {
         public Action Listeners;
-        public void Notify() => Listeners?.Invoke();
+
+        public void Notify()
+        {
+            Listeners?.Invoke();
+        }
     }
 }

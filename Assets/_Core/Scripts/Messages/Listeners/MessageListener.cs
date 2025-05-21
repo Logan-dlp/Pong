@@ -1,0 +1,32 @@
+using UnityEngine;
+using UnityEngine.Events;
+
+namespace Pong.Messages.Listeners
+{
+    public class MessageListener : MonoBehaviour
+    {
+        [SerializeField] private Message[] _messageArray;
+        [SerializeField] private UnityEvent _callbacks;
+
+        private void OnEnable()
+        {
+            foreach (Message message in _messageArray)
+            {
+                message.Listeners += InvokeCallbacks;
+            }
+        }
+
+        private void OnDisable()
+        {
+            foreach (Message message in _messageArray)
+            {
+                message.Listeners -= InvokeCallbacks;
+            }
+        }
+
+        private void InvokeCallbacks()
+        {
+            _callbacks.Invoke();
+        }
+    }
+}
