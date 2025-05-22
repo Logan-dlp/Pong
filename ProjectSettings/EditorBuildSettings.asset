@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Core/Scenes/DONTTUTCH.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/_Core/Scenes/Scene Handler/SceneHandlerMenu.unity
+    guid: d4f17558a17ea1a40b0566c5a0222932
+  - enabled: 1
+    path: Assets/_Core/Scenes/Scene Handler/SceneHandlerGame.unity
+    guid: 02458165be811e543b296322a8a5dfa2
   m_configObjects: {}
