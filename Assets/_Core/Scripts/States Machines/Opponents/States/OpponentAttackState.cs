@@ -2,6 +2,8 @@
 
 namespace Pong.StatesMachines.Opponents.States
 {
+    using Movements.MovementHandlers;
+    
     public class OpponentAttackState : IStates<OpponentsData>
     {
         private float _timeToExecuteState;
@@ -13,10 +15,12 @@ namespace Pong.StatesMachines.Opponents.States
 
         public IStates<OpponentsData> Update(OpponentsData data)
         {
-            if (data.BallGameObjectReference == null)
+            GameObject ballReference = GameObject.FindFirstObjectByType<BallMovementHandler>() == null ? null : GameObject.FindFirstObjectByType<BallMovementHandler>().gameObject;
+            
+            if (ballReference == null)
                 return null;
             
-            if (Vector2.Distance(data.OpponentGameObject.transform.position, data.BallGameObjectReference.transform.position) < data.BallDetectionDistance)
+            if (Vector2.Distance(data.OpponentGameObject.transform.position, ballReference.transform.position) < data.BallDetectionDistance)
             {
                 float offset = 0;
                 if (data.PlayerGameObjectReference.transform.position.y > data.OpponentGameObject.transform.position.y)
@@ -28,11 +32,11 @@ namespace Pong.StatesMachines.Opponents.States
                     offset -= 1f;
                 }
                 
-                if (data.OpponentGameObject.transform.position.y + data.BallDetectionErrorMargin < data.BallGameObjectReference.transform.position.y + offset)
+                if (data.OpponentGameObject.transform.position.y + data.BallDetectionErrorMargin < ballReference.transform.position.y + offset)
                 {
                     data.OpponentsMovementHandler.SetMovementDirection(Vector2.up);
                 }
-                else if (data.OpponentGameObject.transform.position.y - data.BallDetectionErrorMargin > data.BallGameObjectReference.transform.position.y + offset)
+                else if (data.OpponentGameObject.transform.position.y - data.BallDetectionErrorMargin > ballReference.transform.position.y + offset)
                 {
                     data.OpponentsMovementHandler.SetMovementDirection(Vector2.down);
                 }

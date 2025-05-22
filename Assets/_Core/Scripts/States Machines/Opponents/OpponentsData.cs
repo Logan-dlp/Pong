@@ -9,7 +9,6 @@ namespace Pong.StatesMachines.Opponents
         public GameObject OpponentGameObject { get; set; }
         public MovementHandler OpponentsMovementHandler { get; set; }
         public GameObject PlayerGameObjectReference { get; set; }
-        public GameObject BallGameObjectReference { get; set; }
         
         /// <summary>
         /// Time to move to the next state.
