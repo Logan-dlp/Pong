@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,11 +10,22 @@ namespace Pong.Factorys.Factorys
         [SerializeField] private GameObject _templateGameObject;
         
         List<GameObject> _instanceList = new();
-        
+
+        private void Start()
+        {
+            Create();
+        }
+
         public override void Create()
         {
-            GameObject newInstance = Instantiate(_templateGameObject);
-            _instanceList.Add(newInstance);
+            IEnumerator newInstanceCoroutine()
+            {
+                yield return new WaitForEndOfFrame();
+                GameObject newInstance = Instantiate(_templateGameObject);
+                _instanceList.Add(newInstance);
+            }
+
+            StartCoroutine(newInstanceCoroutine());
         }
 
         public override void Destroy(GameObject instance)
