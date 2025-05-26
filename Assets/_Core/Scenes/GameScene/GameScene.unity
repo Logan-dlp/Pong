@@ -247,7 +247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -686,11 +686,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4108838837589028005, guid: 4185384bffd858447aae85ea285ac103, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 4108838837589028005, guid: 4185384bffd858447aae85ea285ac103, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 225.27
       objectReference: {fileID: 0}
     - target: {fileID: 4108838837589028005, guid: 4185384bffd858447aae85ea285ac103, type: 3}
       propertyPath: m_LocalPosition.x
@@ -722,11 +722,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4108838837589028005, guid: 4185384bffd858447aae85ea285ac103, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 125.99997
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 4108838837589028005, guid: 4185384bffd858447aae85ea285ac103, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 49
+      value: 112.64
       objectReference: {fileID: 0}
     - target: {fileID: 4108838837589028005, guid: 4185384bffd858447aae85ea285ac103, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -776,10 +776,38 @@ PrefabInstance:
       propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6551610097076676954, guid: 4185384bffd858447aae85ea285ac103, type: 3}
+      propertyPath: _scoreScriptable
+      value: 
+      objectReference: {fileID: 11400000, guid: 35ab7277979a1614a876e2e07fd9ceed, type: 2}
     - target: {fileID: 7636760705082508644, guid: 4185384bffd858447aae85ea285ac103, type: 3}
       propertyPath: _messageArray.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: e3b26fe4afa58d741839031504fd1258, type: 2}
+    - target: {fileID: 8114147475650123651, guid: 4185384bffd858447aae85ea285ac103, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8114147475650123651, guid: 4185384bffd858447aae85ea285ac103, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8114147475650123651, guid: 4185384bffd858447aae85ea285ac103, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8114147475650123651, guid: 4185384bffd858447aae85ea285ac103, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8114147475650123651, guid: 4185384bffd858447aae85ea285ac103, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -300
+      objectReference: {fileID: 0}
+    - target: {fileID: 8114147475650123651, guid: 4185384bffd858447aae85ea285ac103, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -126
+      objectReference: {fileID: 0}
     - target: {fileID: 8939915550397014147, guid: 4185384bffd858447aae85ea285ac103, type: 3}
       propertyPath: m_Name
       value: ScoreRight
@@ -828,11 +856,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4108838837589028005, guid: 4185384bffd858447aae85ea285ac103, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 4108838837589028005, guid: 4185384bffd858447aae85ea285ac103, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 225.28
       objectReference: {fileID: 0}
     - target: {fileID: 4108838837589028005, guid: 4185384bffd858447aae85ea285ac103, type: 3}
       propertyPath: m_LocalPosition.x
@@ -864,11 +892,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4108838837589028005, guid: 4185384bffd858447aae85ea285ac103, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -125.99997
+      value: -200
       objectReference: {fileID: 0}
     - target: {fileID: 4108838837589028005, guid: 4185384bffd858447aae85ea285ac103, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 49
+      value: 112.64
       objectReference: {fileID: 0}
     - target: {fileID: 4108838837589028005, guid: 4185384bffd858447aae85ea285ac103, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -918,10 +946,38 @@ PrefabInstance:
       propertyPath: _callbacks.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6551610097076676954, guid: 4185384bffd858447aae85ea285ac103, type: 3}
+      propertyPath: _scoreScriptable
+      value: 
+      objectReference: {fileID: 11400000, guid: 2b5c5d37f82219f42ad917cf9d4ef200, type: 2}
     - target: {fileID: 7636760705082508644, guid: 4185384bffd858447aae85ea285ac103, type: 3}
       propertyPath: _messageArray.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: be3164eab5423c040a3388b4a64b6541, type: 2}
+    - target: {fileID: 8114147475650123651, guid: 4185384bffd858447aae85ea285ac103, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8114147475650123651, guid: 4185384bffd858447aae85ea285ac103, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8114147475650123651, guid: 4185384bffd858447aae85ea285ac103, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8114147475650123651, guid: 4185384bffd858447aae85ea285ac103, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8114147475650123651, guid: 4185384bffd858447aae85ea285ac103, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -300
+      objectReference: {fileID: 0}
+    - target: {fileID: 8114147475650123651, guid: 4185384bffd858447aae85ea285ac103, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -126
+      objectReference: {fileID: 0}
     - target: {fileID: 8939915550397014147, guid: 4185384bffd858447aae85ea285ac103, type: 3}
       propertyPath: m_Name
       value: ScoreLeft
