@@ -7,15 +7,15 @@ namespace Pong.Scores
     public class ScoreDisplayBehaviour : MonoBehaviour
     {
         private TextMeshProUGUI _scoreDisplay;
-        [SerializeField] private ScoreScriptable _scoreScriptable;
+        [SerializeField] private ScoreData _scoreScriptable;
 
         private void Awake()
         {
             _scoreDisplay = GetComponent<TextMeshProUGUI>();
-            OnScoreChanged();
+            RefreshDisplayScore();
         }
 
-        public void OnScoreChanged() => _scoreDisplay.text = _scoreScriptable.Score.ToString();
+        public void RefreshDisplayScore() => _scoreDisplay.text = _scoreScriptable.Score.ToString();
     }
 }
 
