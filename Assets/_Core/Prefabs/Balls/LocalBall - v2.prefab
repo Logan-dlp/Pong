@@ -193,6 +193,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d37ec084245e7434f92484b4c1ab3086, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMovement: 3
+  _speedMovement: 4
   _isClampedMovement: 0
   _clampYMovement: {x: 0, y: 0}

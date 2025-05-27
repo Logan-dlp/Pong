@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,7 +8,7 @@ namespace Pong.Factorys.Factorys
     {
         [SerializeField] private GameObject _templateGameObject;
         
-        List<GameObject> _instanceList = new();
+        private List<GameObject> _instanceList = new();
 
         private void Start()
         {
