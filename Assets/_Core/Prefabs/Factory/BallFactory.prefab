@@ -58,9 +58,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78c504c9aee285f4b900626e23c1e84f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _messageArray:
-  - {fileID: 11400000, guid: b91cbb405e8c50f49bbcf62a78f3bb92, type: 2}
-  - {fileID: 11400000, guid: 4315e5e96d885b9449dcacb32d1e249a, type: 2}
+  _messageArray: []
   _callbacks:
     m_PersistentCalls:
       m_Calls:

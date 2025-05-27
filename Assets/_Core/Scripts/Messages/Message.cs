@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Pong.Messages
 {
-    [CreateAssetMenu(fileName = "MessageScriptable", menuName = "MessageScriptable")]
+    [CreateAssetMenu(fileName = "Message", menuName = "Message")]
     public class Message : ScriptableObject
     {
         public Action Listeners;
