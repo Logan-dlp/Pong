@@ -2,7 +2,7 @@ namespace Pong.Scores
 {
     public interface IScore
     {
-        int Score { get; }
-        void AddPoints(int points);
+        public int Score { get; }
+        public void AddPoints(int points);
     }
 }

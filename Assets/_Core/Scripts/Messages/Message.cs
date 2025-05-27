@@ -6,11 +6,11 @@ namespace Pong.Messages
     [CreateAssetMenu(fileName = "Message", menuName = "Message")]
     public class Message : ScriptableObject
     {
-        public Action Listeners;
+        public Action MessageAction;
 
         public void Notify()
         {
-            Listeners?.Invoke();
+            MessageAction?.Invoke();
         }
     }
 }
