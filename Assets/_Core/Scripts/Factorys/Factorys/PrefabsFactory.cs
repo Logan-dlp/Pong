@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,7 +8,7 @@ namespace Pong.Factorys.Factorys
     {
         [SerializeField] private GameObject _templateGameObject;
         
-        List<GameObject> _instanceList = new();
+        private List<GameObject> _instanceList = new();
 
         private void Start()
         {
@@ -30,6 +29,12 @@ namespace Pong.Factorys.Factorys
 
         public override void Destroy(GameObject instance)
         {
+            if (_instanceList.Count <= 0)
+            {
+                Debug.LogWarning("No GameObject has been instantiated !");
+                return;
+            }
+            
             if (!_instanceList.Contains(instance))
             {
                 Debug.LogWarning("The list does not contain this GameObject !");

@@ -3,9 +3,14 @@ using UnityEngine;
 namespace Pong.Scores
 {
     [CreateAssetMenu(fileName = "ScoreData", menuName = "ScoreData")]
-    public class ScoreData : ScriptableObject
+    public class ScoreData : ScriptableObject, IScore
     {
-        public int Score = 0;
-        public void AddPoint() => Score++;
+        private int _score;
+        public int Score => _score;
+        
+        public void AddPoints(int points)
+        {
+            _score += points;
+        }
     }
 }

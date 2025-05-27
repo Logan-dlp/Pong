@@ -12,7 +12,7 @@ namespace Pong.Messages.Listeners
         {
             foreach (Message message in _messageArray)
             {
-                message.Listeners += InvokeCallbacks;
+                message.MessageAction += InvokeCallbacks;
             }
         }
 
@@ -20,7 +20,7 @@ namespace Pong.Messages.Listeners
         {
             foreach (Message message in _messageArray)
             {
-                message.Listeners -= InvokeCallbacks;
+                message.MessageAction -= InvokeCallbacks;
             }
         }
 
