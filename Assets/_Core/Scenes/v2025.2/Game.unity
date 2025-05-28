@@ -345,6 +345,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5116058019015554675, guid: 06eee7969599a0249a4df6959fa5355e, type: 3}
+      propertyPath: _ballDetectionDistance
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5116058019015554675, guid: 06eee7969599a0249a4df6959fa5355e, type: 3}
       propertyPath: _playerGameObjectReference
       value: 
       objectReference: {fileID: 1725878753}
@@ -1430,7 +1434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 196316b9b7ebf664793b1263d1151d71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scoreData: {fileID: 11400000, guid: bd54d551f549f384b9d4f2a5088530c7, type: 2}
+  _scoreData: {fileID: 11400000, guid: 407e0fe4135d3554ca29f9e4f3ec80b2, type: 2}
 --- !u!114 &1749691562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1444,7 +1448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _messageArray:
-  - {fileID: 11400000, guid: d5cd7171cc6c4e643acb18e2fb8f2cd5, type: 2}
+  - {fileID: 11400000, guid: 04206d6bd9bc770428b6458b5a823696, type: 2}
   _callbacks:
     m_PersistentCalls:
       m_Calls:
@@ -1608,7 +1612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 196316b9b7ebf664793b1263d1151d71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scoreData: {fileID: 11400000, guid: 407e0fe4135d3554ca29f9e4f3ec80b2, type: 2}
+  _scoreData: {fileID: 11400000, guid: bd54d551f549f384b9d4f2a5088530c7, type: 2}
 --- !u!114 &1859639484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1622,7 +1626,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _messageArray:
-  - {fileID: 11400000, guid: 04206d6bd9bc770428b6458b5a823696, type: 2}
+  - {fileID: 11400000, guid: d5cd7171cc6c4e643acb18e2fb8f2cd5, type: 2}
   _callbacks:
     m_PersistentCalls:
       m_Calls:
