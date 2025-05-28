@@ -9,7 +9,6 @@ namespace Pong.StatesMachines.Opponents
     public class OpponentsStatesMachines : MonoBehaviour
     {
         [SerializeField] private GameObject _playerGameObjectReference;
-        [SerializeField] private GameObject _ballGameObjectReference;
         
         /// <summary>
         /// Time to move to the next state.
@@ -29,9 +28,9 @@ namespace Pong.StatesMachines.Opponents
         
         private void Awake()
         {
-            if (_playerGameObjectReference == null || _ballGameObjectReference == null)
+            if (_playerGameObjectReference == null)
             {
-                Debug.LogError($"Not all references were put in the inspector in '{name}'!\n'{_playerGameObjectReference}, {_ballGameObjectReference}'");
+                Debug.LogError($"Not all references were put in the inspector in '{name}'!\n'{_playerGameObjectReference}'");
                 enabled = false;
                 return;
             }
@@ -41,7 +40,6 @@ namespace Pong.StatesMachines.Opponents
                 OpponentGameObject = gameObject,
                 OpponentsMovementHandler = GetComponent<MovementHandler>(),
                 PlayerGameObjectReference = _playerGameObjectReference,
-                BallGameObjectReference = _ballGameObjectReference,
                 TimeToExecuteState = _timeToExecuteState,
                 BallDetectionDistance = _ballDetectionDistance,
                 BallDetectionErrorMargin = _ballDetectionErrorMargin

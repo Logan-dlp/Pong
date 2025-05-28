@@ -2,6 +2,8 @@
 
 namespace Pong.StatesMachines.Opponents.States
 {
+    using Movements.MovementHandlers;
+    
     public class OpponentDefenseState : IStates<OpponentsData>
     {
         private float _timeToExecuteState;
@@ -13,16 +15,18 @@ namespace Pong.StatesMachines.Opponents.States
 
         public IStates<OpponentsData> Update(OpponentsData data)
         {
-            if (data.BallGameObjectReference == null)
+            GameObject ballReference = GameObject.FindFirstObjectByType<BallMovementHandler>() == null ? null : GameObject.FindFirstObjectByType<BallMovementHandler>().gameObject;
+            
+            if (ballReference == null)
                 return null;
             
-            if (Vector2.Distance(data.OpponentGameObject.transform.position, data.BallGameObjectReference.transform.position) < data.BallDetectionDistance)
+            if (Vector2.Distance(data.OpponentGameObject.transform.position, ballReference.transform.position) < data.BallDetectionDistance)
             {
-                if (data.OpponentGameObject.transform.position.y + data.BallDetectionErrorMargin < data.BallGameObjectReference.transform.position.y)
+                if (data.OpponentGameObject.transform.position.y + data.BallDetectionErrorMargin < ballReference.transform.position.y)
                 {
                     data.OpponentsMovementHandler.SetMovementDirection(Vector2.up);
                 }
-                else if (data.OpponentGameObject.transform.position.y - data.BallDetectionErrorMargin > data.BallGameObjectReference.transform.position.y)
+                else if (data.OpponentGameObject.transform.position.y - data.BallDetectionErrorMargin > ballReference.transform.position.y)
                 {
                     data.OpponentsMovementHandler.SetMovementDirection(Vector2.down);
                 }
